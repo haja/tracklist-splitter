@@ -29,9 +29,9 @@ myTranscode() {
     # chech if $to is set (not set in startOnly mode for last track)
     if [[ ! $to ]]; then
         echo "to not set! using track end as end timestamp"
-        ffmpeg -ss ${from} -i "${input}" -metadata title="${title}" -metadata author="${artist}" -metadata track=${trackNr} -metadata album="${metaAlbum}" -metadata genre="${metaGenre}" -c copy "${outputString}"
+        ffmpeg -ss ${from} -i "${input}" -metadata title="${title}" -metadata artist="${artist}" -metadata track=${trackNr} -metadata album="${metaAlbum}" -metadata genre="${metaGenre}" -c copy "${outputString}"
     else
-        ffmpeg -i "${input}" -ss ${from} -metadata title="${title}" -metadata author="${artist}" -metadata track=${trackNr} -metadata album="${metaAlbum}" -metadata genre="${metaGenre}" -to ${to} -c copy "${outputString}"
+        ffmpeg -i "${input}" -ss ${from} -metadata title="${title}" -metadata artist="${artist}" -metadata track=${trackNr} -metadata album="${metaAlbum}" -metadata genre="${metaGenre}" -to ${to} -c copy "${outputString}"
     fi
 }
 
