@@ -100,6 +100,7 @@ else
             title[$counter]=${BASH_REMATCH[4]}
         else
             echo "**** no match ${trackRaw} trackNr: $counter";
+            exit 1
         fi
         let "counter += 1";
     done < "$tracklistFile"
